@@ -24,19 +24,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void openCamera1(View view){
         Intent openCam = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(openCam,1);
+        if(openCam.resolveActivity(getPackageManager())!=null){
+            startActivityForResult(openCam,1);
+        }
     }
     public void openCamera2(View view){
         Intent openCam = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(openCam,2);
+        if(openCam.resolveActivity(getPackageManager())!=null){
+            startActivityForResult(openCam,2);
+        }
     }
     public void openCamera3(View view){
         Intent openCam = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(openCam,3);
+        if(openCam.resolveActivity(getPackageManager())!=null){
+            startActivityForResult(openCam,3);
+        }
     }
     public void openCamera4(View view){
         Intent openCam = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(openCam,4);
+        if(openCam.resolveActivity(getPackageManager())!=null){
+            startActivityForResult(openCam,4);
+        }
     }
 
     @Override
